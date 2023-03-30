@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/kwonmoon/interactive-rating-component-main)
-- Live Site URL: [Netlify](https://gleaming-kringle-d54b51.netlify.app/)
+- Live Site URL: [Netlify](https://magnificent-brigadeiros-15473e.netlify.app/)
 
 ## My process
 
