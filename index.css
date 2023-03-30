@@ -1,0 +1,248 @@
+:root {
+   --orange: hsl(25, 97%, 53%);
+   --white: hsl(0, 0%, 100%);
+   --lightgrey: hsl(217, 12%, 63%);
+   --mediumgrey: hsl(216, 12%, 54%);
+   --darkblue: hsl(213, 19%, 18%);
+   --verydarkblue: hsl(216, 12%, 8%);
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+* {
+   margin: 0;
+}
+
+html,
+body {
+   height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+   display: block;
+   max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+   font: inherit;
+}
+
+button {
+   cursor: pointer;
+}
+
+body {
+   background-color: var(--verydarkblue);
+   color: var(--lightgrey);
+   font-family: 'Overpass', sans-serif;
+   font-size: 15px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* CARD */
+
+.card {
+   max-width: 25.75rem;
+   max-height: 26rem;
+   background: radial-gradient(98.96% 98.96% at 50% 0%, hsl(215, 20%, 17%) 0%, hsl(216, 24%, 12%) 100%);
+   border-radius: 1.875rem;
+   padding: 2rem;
+   /* display: none; */
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}
+
+.card .star {
+   width: 3rem;
+   aspect-ratio: 1;
+   background-color: var(--darkblue);
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 1.875rem
+}
+
+.card h1 {
+   color: var(--white);
+   font-size: 1.75rem;
+   line-height: 1.27;
+}
+
+.card p {
+   line-height: 1.6;
+}
+
+.scores {
+   margin: 1.5rem 0 2rem;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.score-button {
+   border: 0;
+   padding: 0;
+   font-size: 1rem;
+   line-height: 1.5;
+   color: var(--lightgrey);
+   background-color: var(--darkblue);
+   width: 3.1875rem;
+   aspect-ratio: 1;
+   border-radius: 50%;
+}
+
+.score-button:hover {
+   background-color: var(--orange);
+}
+
+.score-button.selected {
+   background-color: var(--mediumgrey);
+}
+
+/* .card > a {
+   width: 100%;
+   background-color: var(--orange);
+   color: var(--white);
+   text-align: center;
+   text-decoration: none;
+   text-transform: uppercase;
+   letter-spacing: 0.125rem;
+   line-height: 1.93;
+   padding: 0.5rem;
+   border-radius: 1.4rem;
+   border: none;
+} */
+#submit-button {
+   width: 100%;
+   background-color: var(--orange);
+   color: var(--white);
+   text-align: center;
+   text-decoration: none;
+   text-transform: uppercase;
+   letter-spacing: 0.125rem;
+   line-height: 1.93;
+   padding: 0.5rem;
+   border-radius: 1.4rem;
+   border: none;
+}
+
+#submit-button:hover {
+   color: var(--orange);
+   background-color: var(--white);
+}
+
+/* THANKYOU */
+
+.thankyou {
+   max-width: 25.75rem;
+   max-height: 26rem;
+   background: radial-gradient(98.96% 98.96% at 50% 0%, hsl(215, 20%, 17%) 0%, hsl(216, 24%, 12%) 100%);
+   border-radius: 1.875rem;
+   padding: 2.8125rem 2rem;
+   display: none;
+   /* display: flex; */
+   flex-direction: column;
+   align-items: center;
+}
+
+#result {
+   background-color: var(--darkblue);
+   color: var(--orange);
+   line-height: 1.6;
+   padding: 0.25rem 1rem;
+   border-radius: 1.41rem;
+   margin: 2rem 0;
+}
+
+.thankyou h1 {
+   color: var(--white);
+   font-size: 1.75rem;
+   line-height: 1.25;
+   padding: 0.25rem 0;
+   margin: 0 0 0.044rem;
+}
+
+.statement {
+   color: var(--lightgrey);
+   text-align: center;
+   line-height: 1.6;
+   padding: 0 0.25rem;
+}
+
+@media screen and (max-width: 38rem) {
+   body {
+      font-size: 0.875rem;
+   }
+
+   .card {
+      max-width: 20.5rem;
+      max-height: 22.5rem;
+      margin-inline: 1.5rem;
+      border-radius: 0.9375rem;
+      padding: 1.5rem 1.5rem 2rem;
+   }
+
+   .card .star {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-bottom: 1rem
+   }
+   
+   .card h1 {
+      font-size: 1.5rem;
+   }
+ 
+   .card p {
+      line-height: 1.57;
+   }
+ 
+   .scores {
+      margin: 1.5rem 0;
+   }
+
+   .score-button {
+      line-height: 1.714;
+      width: 2.625rem;
+   }
+   
+   .card > a {
+      letter-spacing: 0.117rem;
+      line-height: 1.26;
+      padding: 0.845rem;
+      border-radius: 1.4rem;
+   }
+
+   
+   .thankyou {
+      max-width: 20.5rem;
+      max-height: 22.5rem;
+      border-radius: 0.9375rem;
+      padding: 2.06rem 1.5rem 2.375rem;
+   }
+   
+   #result {
+      font-size: 0.875rem;
+      padding: 0.31rem 1rem;
+      margin: 1.5rem 0;
+   }
+   
+   .thankyou h1 {
+      font-size: 1.5rem;
+   }  
+}
